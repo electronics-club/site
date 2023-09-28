@@ -23,8 +23,15 @@ clean:
 serve: build
 	python -m http.server -d build
 
-# Github pages intigration
-deploy: build
+# One time setup for github pages
+gh-setup:
+	git checkout --orphan gh-pages
+	git reset --hard
+	git commit --allow-empty -m "Init"
+	git checkout main
+
+# Deploy the site
+gh-deploy: build
 	git worktree add public_html gh-pages
 	cp -rf build/* public_html
 	cd public_html
