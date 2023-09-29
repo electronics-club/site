@@ -34,9 +34,9 @@ gh-setup:
 gh-deploy: build
 	git worktree add public_html gh-pages
 	cp -rf build/* public_html
-	cd public_html
-	git add --all
-	git commit -m "Deploy to github pages"
+	cd public_html && \
+	git add --all && \
+	git commit -m "Deploy to github pages" && \
 	git push origin gh-pages
 	git worktree remove public_html
 
