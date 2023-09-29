@@ -1,18 +1,78 @@
-<!-- Handcrafted with the finest electrons -->
+<!-- Handcrafted from the finest bits -->
 
 <html>
 <head>
 	<title>Hobby electronics club</title>
 	<meta name="generator" content="GNU Make">
 	<meta charset="utf-8">
-
 	<style>
 
+/* Some basic styling for the site, feal free to steal this, CC0 */
 body {
+	/* White on balack formating */
 	background-color: black;
 	color: white;
+	margin: 0 auto;
+	/* Centered column */
+	max-width: 50rem;
+	line-height: 1.45;
+	/* Don't mash text to the top of the screen */
+	padding: 1.5rem 0 1.5rem;
+	/* Light border */
+	box-shadow: 0 0 2rem 0 #222;
 }
-	
+
+main {
+	/* Add a space between the shadows and the text */
+	padding: 0 1.4rem;
+	/* Text styling */
+	hyphens: auto;
+}
+
+img {
+	margin: 0 auto;
+	max-width: 40rem;
+	display: block;
+}
+
+/* Links */
+
+a:link {
+	color: #aaf;
+}
+
+a:visited {
+	color: #aac;
+}
+
+/* Navigation bar styling*/
+
+nav ul {
+	border: solid #444;
+	margin: 0.4em;
+	padding: 0;
+	display: flex;
+	flex: 1;
+}
+
+nav li {
+	/* Remove bullet points for nav entries */
+	list-style: none;
+}
+nav li * {
+	/* Pack all nav entries into a single line */
+	display: block;
+	padding: 0.4rem 0.4rem;
+}
+
 	</style>
 </head>
 <body>
+<nav>
+	<ul>
+		<li><strong>Electronics club:</strong></li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="showcase.html">Showcase</a></li>
+	</ul>
+</nav>
+<main>
