@@ -23,14 +23,14 @@ clean:
 serve: build
 	python -m http.server -d build
 
+# GitHub pages integration, github will have to be configured to serve from the root of the gh-pages branch.
 # One time setup for github pages
 gh-setup:
 	git checkout --orphan gh-pages
 	git reset --hard
 	git commit --allow-empty -m "Init"
 	git checkout main
-
-# Deploy the site
+# Deploy the site to pages
 gh-deploy: build
 	git worktree add public_html gh-pages
 	cp -rf build/* public_html
